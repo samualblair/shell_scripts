@@ -3,9 +3,11 @@
 # Script Explaination
 This script will help confirm usage of items in a bigip.conf file
 
-The $1 represents the first variable on the command line so you can run script with the filename after it
+The $1 represents the first variable on the command line so you can run script with the filename after it, this will be the items to search for file.
 
-The '-test_1' represents the default variable for input file, so if not run with any file at command line this file name will be used. Normally expect this to be called out.
+The $2 represents the second variable on the command line so you can run script with the filename after it, this will be the config file.
+
+The '-test_1' represents the default variable for input file, so if not run with any file at command line this file name will be used. Normally expect this to be called out. The '-bigip.conf' represents the default variable for config file (second input) and optionally can be specified.
 
 Example usage:
 ```bash
@@ -15,7 +17,7 @@ Example usage:
 Script Body:
 ```bash
 while IFS= read -r line; do
-  grep "$line" bigip.conf
+  grep "$line" "${2:-bigip.conf}"
   echo "##########"
 done < "${1:-test_1}"
 
