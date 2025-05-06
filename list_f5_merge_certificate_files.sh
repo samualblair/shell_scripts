@@ -13,49 +13,35 @@
 ASIDE="UCS_TEMP1 UCS_TEMP3 UCS_TEMPA UCS_TEMP_NEWA"
 BSIDE="UCS_TEMP2 UCS_TEMP4 UCS_TEMPB UCS_TEMP_NEWB"
 
-for p in $ASIDE
-do
- ls -la $p/files_d/Common_d/certificate_d
-done
-
-
 # Shows 1 level of recursion
 # ls -1 -R
 
 for p in $ASIDE
 do
- ls -1 -R $p/files_d/Common_d/certificate_d
+ ls -1 -R "$p/files_d/Common_d/certificate_d"
 done
 
 for p in $BSIDE
 do
- ls -1 -R $p/files_d/Common_d/certificate_d
+ ls -1 -R "$p/files_d/Common_d/certificate_d"
 done
-
-
 
 for p in $ASIDE
 do
- ls -1 -R $p/files_d/Common_d/certificate_signing_request_d
+ ls -1 -R "$p/files_d/Common_d/certificate_signing_request_d"
 done
 
 for p in $BSIDE
 do
- ls -1 -R $p/files_d/Common_d/certificate_signing_request_d
+ ls -1 -R "$p/files_d/Common_d/certificate_signing_request_d"
 done
-
-
-#  ls -1 -R ./UCS_NEW_A/files_d/Common_d/certificate_signing_request_d/
 
 for p in $ASIDE
 do
- ls -1 -R $p/files_d/Common_d/external_monitor_d
+ ls -1 -R "$p/files_d/Common_d/external_monitor_d"
 done
 
 for p in $BSIDE
 do
- ls -1 -R $p/files_d/Common_d/external_monitor_d
+ ls -1 -R "$p/files_d/Common_d/external_monitor_d"
 done
-
-
-#  ls -1 -R ./UCS_NEW_A/files_d/Common_d/external_monitor_d/
