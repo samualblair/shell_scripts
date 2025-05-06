@@ -13,35 +13,19 @@
 ASIDE="UCS_TEMP1 UCS_TEMP3 UCS_TEMPA UCS_TEMP_NEWA"
 BSIDE="UCS_TEMP2 UCS_TEMP4 UCS_TEMPB UCS_TEMP_NEWB"
 
-# Shows 1 level of recursion
-# ls -1 -R
+# Using 'ls' to show show 1 level (-1) of recursion (-R) in files - "ls -1 -R"
 
-for p in $ASIDE
+for p in $ASIDE $BSIDE
 do
  ls -1 -R "$p/files_d/Common_d/certificate_d"
 done
 
-for p in $BSIDE
-do
- ls -1 -R "$p/files_d/Common_d/certificate_d"
-done
-
-for p in $ASIDE
+for p in $ASIDE $BSIDE
 do
  ls -1 -R "$p/files_d/Common_d/certificate_signing_request_d"
 done
 
-for p in $BSIDE
-do
- ls -1 -R "$p/files_d/Common_d/certificate_signing_request_d"
-done
-
-for p in $ASIDE
-do
- ls -1 -R "$p/files_d/Common_d/external_monitor_d"
-done
-
-for p in $BSIDE
+for p in $ASIDE $BSIDE
 do
  ls -1 -R "$p/files_d/Common_d/external_monitor_d"
 done
