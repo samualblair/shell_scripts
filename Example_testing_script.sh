@@ -1,3 +1,7 @@
+#! /bin/bash
+
+# Not currently functional as is (needs variables) - but a reference testing script using arrays in bash
+# Taken from script used for testing BIG-IQ CM to DCD devices, but generically can be adapted and used for many testing scenarios
 
 if [[ $arraylengthdcdip -gt 0 ]]; then
   echo -e "\n*** TEST BIG-IQ primary CM => DCD(s)"
@@ -14,3 +18,4 @@ if [[ $arraylengthdcdip -gt 0 ]]; then
       echo
     fi
   done
+fi
