@@ -37,5 +37,5 @@ Michael Johnson ([@samualblair](https://github.com/samualblair))
 ## Versioning
 [![CalVer](https://img.shields.io/static/v1?label=CalVer&message=YY.0M.0D)](https://calver.org/)
 
-* 2025.05.06 - Added List certificate files script
+* 2025.05.06 - Added List certificate files and ping test
 * 2025.04.08 - General release
