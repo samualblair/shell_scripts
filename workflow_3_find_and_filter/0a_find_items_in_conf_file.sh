@@ -13,8 +13,6 @@
 # The $2 represents the second variable on the command line so you can run script with the filename after it, this will be the config file
 # The -bigip.conf represents the default variable, so if not run with any file at command line this file name will be used
 
-# Example "/bin/sh sort_items_file.sh only_pools >> first_pass_check_pools"
-
 # Old method
 
 #cat ${1:-test_1} | while IFS= read -r line
