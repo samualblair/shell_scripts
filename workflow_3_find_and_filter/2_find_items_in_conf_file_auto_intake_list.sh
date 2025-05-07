@@ -88,36 +88,36 @@ do
 
   echo "Parsing ${f5_base_conf_file}"
 
-  echo "###### PARSING START ######" >> "${f5_conf_file}_check_self.txt"
-  echo "###### PARSING DATE: $(DATE)" >> "${f5_conf_file}_check_self.txt"
+  echo "###### PARSING START ######" >> "${f5_base_conf_file}_check_self.txt"
+  echo "###### PARSING DATE: $(DATE)" >> "${f5_base_conf_file}_check_self.txt"
   while IFS= read -r line; do
     grep "$line" "$f5_base_conf_file" >> "${f5_base_conf_file}_check_self.txt"
     echo "##########" >> "${f5_base_conf_file}_check_self.txt"
   done < "${f5_base_conf_file}_self.txt"
-  echo "###### PARSING END   ######" >> "${f5_conf_file}_check_self.txt"
+  echo "###### PARSING END   ######" >> "${f5_base_conf_file}_check_self.txt"
 
-  echo "###### PARSING START ######" >> "${f5_conf_file}_check_rd.txt"
-  echo "###### PARSING DATE: $(DATE)" >> "${f5_conf_file}_check_rd.txt"
+  echo "###### PARSING START ######" >> "${f5_base_conf_file}_check_rd.txt"
+  echo "###### PARSING DATE: $(DATE)" >> "${f5_base_conf_file}_check_rd.txt"
   while IFS= read -r line; do
     grep "$line" "$f5_base_conf_file" >> "${f5_base_conf_file}_check_rd.txt"
     echo "##########" >> "${f5_base_conf_file}_check_rd.txt"
   done < "${f5_base_conf_file}_rd.txt"
-  echo "###### PARSING END   ######" >> "${f5_conf_file}_check_rd.txt"
+  echo "###### PARSING END   ######" >> "${f5_base_conf_file}_check_rd.txt"
 
-  echo "###### PARSING START ######" >> "${f5_conf_file}_check_vlan.txt"
-  echo "###### PARSING DATE: $(DATE)" >> "${f5_conf_file}_check_vlan.txt"
+  echo "###### PARSING START ######" >> "${f5_base_conf_file}_check_vlan.txt"
+  echo "###### PARSING DATE: $(DATE)" >> "${f5_base_conf_file}_check_vlan.txt"
   while IFS= read -r line; do
     grep "$line" "$f5_base_conf_file" >> "${f5_base_conf_file}_check_vlan.txt"
     echo "##########" >> "${f5_base_conf_file}_check_vlan.txt"
   done < "${f5_base_conf_file}_vlan.txt"
-  echo "###### PARSING END   ######" >> "${f5_conf_file}_check_vlan.txt"
+  echo "###### PARSING END   ######" >> "${f5_base_conf_file}_check_vlan.txt"
 
-  echo "###### PARSING START ######" >> "${f5_conf_file}_check_mgmt_route.txt"
-  echo "###### PARSING DATE: $(DATE)" >> "${f5_conf_file}_check_mgmt_route.txt"
+  echo "###### PARSING START ######" >> "${f5_base_conf_file}_check_mgmt_route.txt"
+  echo "###### PARSING DATE: $(DATE)" >> "${f5_base_conf_file}_check_mgmt_route.txt"
   while IFS= read -r line; do
     grep "$line" "$f5_base_conf_file" >> "${f5_base_conf_file}_check_mgmt_route.txt"
     echo "##########" >> "${f5_base_conf_file}_check_mgmt_route.txt"
   done < "${f5_base_conf_file}_mgmt_route.txt"
-  echo "###### PARSING END   ######" >> "${f5_conf_file}_check_mgmt_route.txt"
+  echo "###### PARSING END   ######" >> "${f5_base_conf_file}_check_mgmt_route.txt"
 
 done
