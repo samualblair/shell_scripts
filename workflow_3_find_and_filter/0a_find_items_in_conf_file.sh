@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # Name: find_items_in_conf_file.sh
-# Author Michael Johnson 02-05-2024
+# Author Michael Johnson 02-06-2025
 
 # Expects source file with list of items (such as virtual server names), one line each
 # Runs against bigip.conf file, finding each element and printing matches to screen (or file if redirected with > or >>)

@@ -17,6 +17,7 @@ do
   echo "##########"
   echo Source File "$p"
   echo "##########"
+  # LTM and General Section
   grep "ltm virtual-address " "$p" >> "$p"_va.txt
   grep "ltm virtual " "$p" >> "$p"_vs.txt
   grep "ltm pool " "$p" >> "$p"_pool.txt
@@ -24,6 +25,10 @@ do
   grep "ltm monitor " "$p">> "$p"_monitor.txt
   grep "ltm rule " "$p">> "$p"_irule.txt
   grep "net route " "$p">> "$p"_net_route.txt
+  # ASM Section
+  grep "asm policy " "$p">> "$p"_asm_policy.txt
+  grep "asm device-snyc " "$p">> "$p"_asm_sync.txt
+  grep "asm predefined-policy " "$p">> "$p"_asm_predefined.txt
 done
 
 for p in $F5_BASE_CONFIG_FILES

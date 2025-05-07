@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # Name: find_items_in_conf_file_auto_intake_list
-# Author Michael Johnson 02-05-2024
+# Author Michael Johnson 02-06-2025
 
 # This script is expected to be run after 'find_key_items_in_tmsh_conf.sh' which would generate the files that need to be checked against.
 # After running 'find_key_items_in_tmsh_conf.sh' but before running this script, you will need to manually remove unnesecary elements of text.
@@ -78,6 +78,30 @@ do
     echo "##########" >> "${f5_conf_file}_check_net_route.txt"
   done < "${f5_conf_file}_net_route.txt"
   echo "###### PARSING END   ######" >> "${f5_conf_file}_check_net_route.txt"
+
+  echo "###### PARSING START ######" >> "${f5_conf_file}_check_asm_policy.txt"
+  echo "###### PARSING DATE: $(DATE)" >> "${f5_conf_file}_check_asm_policy.txt"
+  while IFS= read -r line; do
+    grep "$line" < "$f5_conf_file" >> "${f5_conf_file}_check_asm_policy.txt"
+    echo "##########" >> "${f5_conf_file}_check_asm_policy.txt"
+  done < "${f5_conf_file}_asm_policy.txt"
+  echo "###### PARSING END   ######" >> "${f5_conf_file}_check_asm_policy.txt"
+
+  echo "###### PARSING START ######" >> "${f5_conf_file}_check_asm_sync.txt"
+  echo "###### PARSING DATE: $(DATE)" >> "${f5_conf_file}_check_asm_sync.txt"
+  while IFS= read -r line; do
+    grep "$line" < "$f5_conf_file" >> "${f5_conf_file}_check_asm_sync.txt"
+    echo "##########" >> "${f5_conf_file}_check_asm_sync.txt"
+  done < "${f5_conf_file}_asm_sync.txt"
+  echo "###### PARSING END   ######" >> "${f5_conf_file}_check_asm_sync.txt"
+
+  echo "###### PARSING START ######" >> "${f5_conf_file}_check_asm_predefined.txt"
+  echo "###### PARSING DATE: $(DATE)" >> "${f5_conf_file}_check_asm_predefined.txt"
+  while IFS= read -r line; do
+    grep "$line" < "$f5_conf_file" >> "${f5_conf_file}_check_asm_predefined.txt"
+    echo "##########" >> "${f5_conf_file}_check_asm_predefined.txt"
+  done < "${f5_conf_file}_asm_predefined.txt"
+  echo "###### PARSING END   ######" >> "${f5_conf_file}_check_asm_predefined.txt"
 
 done
 
