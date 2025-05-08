@@ -20,6 +20,10 @@ Some other scripts here as well, such as Tcl , tmsh, etc.
 
     Simple shell script for finding list of items in a config file
 
+* find_key_items_in_tmsh_conf
+
+    Simple shell script for listing objects files in F5 tmsh config file and sorting them ito their own list files
+
 * list_f5_merge_certificate_files
 
     Simple shell script for listing out files, can be used for listing out f5 certificates from pre and post merged ucs
@@ -28,9 +32,9 @@ Some other scripts here as well, such as Tcl , tmsh, etc.
 
     Simple shell script testing connectivty to many devices
 
-* find_key_items_in_tmsh_conf
+* cleanup_script_macos_dot_files
 
-    Simple shell script for listing objects files in F5 tmsh config file and sorting them ito their own list files
+    Very simple script that finds MacOS dot files \(starting with ._\) and deletes them
 
 ## Workflows
 
@@ -45,5 +49,6 @@ Michael Johnson ([@samualblair](https://github.com/samualblair))
 ## Versioning
 [![CalVer](https://img.shields.io/static/v1?label=CalVer&message=YY.0M.0D)](https://calver.org/)
 
+* 2025.05.08 - Added basic script to remove undesired MacOS dot files
 * 2025.05.06 - Added List certificate files, connectivty test, and tmsh parse scripts
 * 2025.04.08 - General release
