@@ -120,6 +120,15 @@ do
   done < "${f5_base_conf_file}_self.txt"
   echo "###### PARSING END   ######" >> "${f5_base_conf_file}_check_self.txt"
 
+  # Detailed Net Self IP Configuration useful
+  echo "###### PARSING START ######" >> "${f5_base_conf_file}_check_self_details.txt"
+  echo "###### PARSING DATE: $(DATE)" >> "${f5_base_conf_file}_check_self_details.txt"
+  while IFS= read -r line; do
+    grep -A 10 "$line" < "$f5_base_conf_file" >> "${f5_base_conf_file}_check_self_details.txt"
+    echo "##########" >> "${f5_base_conf_file}_check_self_details.txt"
+  done < "${f5_base_conf_file}_self.txt"
+  echo "###### PARSING END   ######" >> "${f5_base_conf_file}_check_self_details.txt"
+
   echo "###### PARSING START ######" >> "${f5_base_conf_file}_check_rd.txt"
   echo "###### PARSING DATE: $(DATE)" >> "${f5_base_conf_file}_check_rd.txt"
   while IFS= read -r line; do
@@ -135,6 +144,15 @@ do
     echo "##########" >> "${f5_base_conf_file}_check_vlan.txt"
   done < "${f5_base_conf_file}_vlan.txt"
   echo "###### PARSING END   ######" >> "${f5_base_conf_file}_check_vlan.txt"
+
+  # Detailed Net VLAN Configuration
+  echo "###### PARSING START ######" >> "${f5_base_conf_file}_check_vlan_details.txt"
+  echo "###### PARSING DATE: $(DATE)" >> "${f5_base_conf_file}_check_vlan_details.txt"
+  while IFS= read -r line; do
+    grep -A 10 "$line" < "$f5_base_conf_file" >> "${f5_base_conf_file}_check_vlan_details.txt"
+    echo "##########" >> "${f5_base_conf_file}_check_vlan_details.txt"
+  done < "${f5_base_conf_file}_vlan.txt"
+  echo "###### PARSING END   ######" >> "${f5_base_conf_file}_check_vlan_details.txt"
 
   echo "###### PARSING START ######" >> "${f5_base_conf_file}_check_mgmt_route.txt"
   echo "###### PARSING DATE: $(DATE)" >> "${f5_base_conf_file}_check_mgmt_route.txt"
