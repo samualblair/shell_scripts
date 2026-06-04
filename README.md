@@ -49,6 +49,7 @@ Michael Johnson ([@samualblair](https://github.com/samualblair))
 ## Versioning
 [![CalVer](https://img.shields.io/static/v1?label=CalVer&message=YY.0M.0D)](https://calver.org/)
 
+* 2026.06.04 - Added bigip restore default profiles script
 * 2025.09.02 - Added basic powershell script to replicate 'openssl s_client' behavior
 * 2025.05.08 - Added basic script to remove undesired MacOS dot files
 * 2025.05.06 - Added List certificate files, connectivty test, and tmsh parse scripts
